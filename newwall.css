@@ -1,0 +1,170 @@
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ body {
+font-family: 'proxima-nova', sans-serif;
+ }
+
+
+.container {
+  width: 100%;
+}
+
+.content {
+  position: relative;
+  width: 25%;
+  float: left;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+.content .content-overlay {
+  background: #000;
+  position: absolute;
+  width: 100%;
+  height: 8%;
+  bottom: 8%;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  transition: all .8s ease-in-out;
+}
+
+.content:hover .content-overlay {
+  z-index: 2;
+  height: 33%;
+  opacity: 1;
+
+}
+
+.content:hover .content-overlay2 {
+  top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   height: 99%;
+   width: 100%;
+  opacity: 0.6;
+
+}
+
+.content .content-overlay2 {
+  background: #000;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+}
+
+
+.content-details {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  top: 100%;
+  left: 50%;
+  text-align: left;
+  font-family: 'proxima-nova', sans-serif;
+  padding: 0 16px;
+  opacity: 1;
+  transform: translate(-50%);
+  -webkit-transition: all .8s ease-in-out;
+
+
+}
+
+.content:hover .content-details {
+  top: 63%;
+  bottom: 90%;
+  opacity: 1;
+}
+
+
+
+.content-details p {
+
+  color: #fff;
+  font-size: 10px;
+  padding-right: 20px;
+  margin-top: 8%;
+  margin-bottom: 15px;
+  text-align: left;
+
+
+}
+
+.content-details a {
+  color: #fff;
+  font-size: 10px;
+  text-align: left;
+  padding-bottom: 0;
+  transition-duration: 0.6s;
+
+}
+.content-details:hover a {
+  color: gray;
+  font-size: 10px;
+  text-align: left;
+  padding-bottom: 0;
+
+}
+
+
+button {
+  display: block;
+  z-index: 9999;
+  border: none;
+  color: #fff;
+  font-weight: normal;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 15px;
+  color: white;
+  font-family: 'proxima-nova', sans-serif;
+  background-color: black;
+  text-transform: uppercase;
+  font-size: 20px;
+  position: absolute;
+  width: 100%;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: left;
+  transition: all 1s erase;
+
+}
+
+
+@media only screen and (max-width: 900px){
+    .content {
+      width: 46%;
+      margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+  .content-details h2 {
+    font-size: 25px;
+
+  }
+  .content-details p {
+    font-size: 15px;
+    line-height: 22px;
+
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .content {
+    width: 100%;
+    margin: 0 auto;
+
+  }
+}
